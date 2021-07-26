@@ -152,8 +152,8 @@ function randomcolors(){
 let blackjackgame ={
     'you': {'scorespan':'#your-blackjack-result', 'div': '#your-box','score':0},
     'dealer': {'scorespan':'#dealer-blackjack-result', 'div': '#dealer-box','score':0},
-     'cards': ['2','3','4','5','6','7','8','9','10','k','j','q','a'],
-     'cardsmap':{'2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, '10':10, 'k':10, 'j':10, 'q':11, 'a':[1, 11] } ,
+     'cards': ['2','3','4','5','6','7','8','9','10','K','J','Q','A'],
+     'cardsmap':{'2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, '10':10, 'K':10, 'J':10, 'Q':11, 'A':[1, 11] } ,
      'wins' :0,
      'losses':0,
      'draws' :0,
@@ -229,7 +229,7 @@ function blackjackdeal (){
 }
 
 function updatescore(card, activeplayer) {
-    if (card==='a') {
+    if (card==='A') {
         if (activeplayer['score'] + blackjackgame['cardsmap'][card][1] <=21) 
         {
            activeplayer['score'] += blackjackgame['cardsmap'][card][1];
